@@ -43,7 +43,7 @@ async function saveFile() { //storing up the file to the ipfs
 
 async function getData(hash) {
     let ipfs = await ipfsClient();
-
+    //add hash value 
     let asyncitr = ipfs.cat(hash)
 
     for await (const itr of asyncitr) {
